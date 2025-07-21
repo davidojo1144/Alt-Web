@@ -36,7 +36,7 @@ const SignUp = () => {
   return (
     <>
       <div className='app-background relative'>
-        <div className='container flex flex-col md:flex-row justify-between md:space-y-0 space-y-10 md:pt-10 md:pb-10 pt-20 '>
+        <div className='container flex flex-col md:flex-row justify-between md:space-y-0 space-y-10 md:pt-10 pb-10 md:pb-10 pt-20 '>
             <img className=' md:h-20 w-52' src={assets.logo} alt="" />
             <div className='bg-white px-5 lg:px-16 py-20 rounded-2xl w-full md:w-[50%]'>
                {
