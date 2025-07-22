@@ -1,11 +1,16 @@
 import React from 'react'
-import { Routes, Route, Outlet } from 'react-router-dom'
+import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion';
 import Login from "./pages/Login"
 import SignUp from "./pages/SignUp"
 import Kyc from './pages/Kyc';
-import Roles from './pages/Roles';
+import Dashboard from "./pages/Dashboard"
 import AdminPanel from './components/AdminPanel';
+import Profile from './pages/Profile';
+import Drivers from './pages/Drivers';
+import Wallet from './pages/Wallet';
+import Track from './pages/Track';
+import Orders from './pages/Orders';
 
 
 const AdminLayout = () => {
@@ -28,7 +33,12 @@ const App = () => {
           <Route path="/signup" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <SignUp/> </motion.div> } />
           <Route path="/kyc" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Kyc/> </motion.div> } />
           <Route element={<AdminLayout />}>
-            <Route path="/roles" element={<Roles />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/driver" element={<Drivers />} />
+            <Route path="/wallet" element={<Wallet />} />
+            <Route path="/track" element={<Track />} />
+            <Route path="/orders" element={<Orders />} />
           </Route>
         </Routes>
       </div>

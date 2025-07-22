@@ -129,7 +129,7 @@ const Kyc = () => {
               ) : kycText === "" ? (
                   <CarDetails/>
               ) : <>
-                <button className='bg-red-500 hover:bg-red-600 text-white py-2 w-full mt-8 rounded-2xl' onClick={() => navigate("/roles")}>Next</button>
+                <button className='bg-red-500 hover:bg-red-600 text-white py-2 w-full mt-8 rounded-2xl' onClick={() => navigate("/dashboard")}>Next</button>
                 <p className='mt-5 text-md text-blue-500 text-center font-medium hover:text-blue-600 cursor-pointer' onClick={handleBusinessKyc}>Skip</p>
 
                 <div className='pt-5 flex items-center justify-center gap-3'>
