@@ -12,6 +12,12 @@ import chart from "./Chart.png"
 import recentshipment from "./Recent Shipments.png"
 import messageicon from "./Messages Icon.png"
 import profileimg from "./Profile Image (Memoji).png"
+import seconglogo from "./seconglogo.png"
+import deliveryimg1 from "./deliveryimg1.png"
+import deliveryimg2 from "./deliveryimg2.png"
+import deliverycheckmark from "./deliverycheckmark.png"
+import deliveryprofile from "./deliveryprofile.png"
+import deliveryphone from "./deliveryphone.png"
 
 
 
@@ -30,5 +36,11 @@ export const assets = {
     chart,
     recentshipment,
     messageicon,
-    profileimg
+    profileimg,
+    seconglogo,
+    deliveryimg1,
+    deliveryimg2,
+    deliverycheckmark,
+    deliveryphone,
+    deliveryprofile
 }

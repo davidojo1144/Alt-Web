@@ -11,12 +11,18 @@ import Drivers from './pages/Drivers';
 import Wallet from './pages/Wallet';
 import Track from './pages/Track';
 import Orders from './pages/Orders';
+import ResponsiveSideNav from './components/ResponsiveSideNav';
+import ActiveDelivery from './pages/ActiveDelivery';
+import PendingDelivery from './pages/PendingDelivery';
+import SuccessfulDelivery from './pages/SuccessfulDelivery';
+import TotalDelivery from './pages/TotalDelivery';
 
 
 const AdminLayout = () => {
   return (
-    <div className="flex flex-col md:flex-row min-h-screen">
+    <div className="flex flex-col md:flex-row min-h-screen ">
       <AdminPanel />
+      <ResponsiveSideNav/>
       <div className="flex-1 bg-gray-50 min-h-screen"> 
         <Outlet/>
       </div>
@@ -33,12 +39,16 @@ const App = () => {
           <Route path="/signup" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <SignUp/> </motion.div> } />
           <Route path="/kyc" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Kyc/> </motion.div> } />
           <Route element={<AdminLayout />}>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/driver" element={<Drivers />} />
-            <Route path="/wallet" element={<Wallet />} />
-            <Route path="/track" element={<Track />} />
-            <Route path="/orders" element={<Orders />} />
+            <Route path="/dashboard" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Dashboard/> </motion.div> }/>
+            <Route path="/profile" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Profile/> </motion.div> } />
+            <Route path="/driver" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Drivers/> </motion.div> } />
+            <Route path="/wallet" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Wallet/> </motion.div> } />
+            <Route path="/track" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Track/> </motion.div> } />
+            <Route path="/orders" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <Orders/> </motion.div> } />
+            <Route path="/activedeliveries" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <ActiveDelivery/> </motion.div> } />
+            <Route path="/pendingdeliveries" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <PendingDelivery/> </motion.div> } />
+            <Route path="/successfuldeliveries" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <SuccessfulDelivery/> </motion.div> } />
+            <Route path="/totaldeliveries" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <TotalDelivery/> </motion.div> } />
           </Route>
         </Routes>
       </div>

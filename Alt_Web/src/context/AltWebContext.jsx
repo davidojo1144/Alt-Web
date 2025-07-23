@@ -5,12 +5,21 @@ export const AltWebContext = createContext()
 
 const AltWebContextProvider = (props) => {
      const navigate = useNavigate()
+     const activeDelivery = "113"
+     const pendingDelivery = "210"
+     const successfulDelivery = "10,790"
+     const totalDelivery = "19,250"
 
 
 
     const value = {
-        navigate
+        navigate,
+        activeDelivery,
+        pendingDelivery,
+        successfulDelivery,
+        totalDelivery
     }
+    
 
 
     return (

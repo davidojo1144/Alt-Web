@@ -5,7 +5,7 @@ const Profile = () => {
   return (
     <>
     <div>
-      <div className='lg:p-8 md:p-4 p-8'>
+      <div className='lg:p-8 md:p-4 md:ml-0 ml-10 p-8 relative'>
         <div className='flex justify-between'>
             <div className='flex gap-3 p-3 items-center justify-between'>
                 <img className='w-7 h-7 cursor-pointer' src={assets.dashprofile} alt="" />
@@ -23,7 +23,7 @@ const Profile = () => {
             <p className='text-md font-medium text-red-500'>Profile</p>
             <p className='text-md font-medium text-gray-600'>Support & Help/Personalize</p>
         </div>
-        <div className='border border-gray-500 rounded-2xl mt-3 md:mt-7 p-5'>
+        <div className='border border-gray-500 rounded-2xl mt-3 md:mt-7 p-5 md:p-8'>
             <div className='flex justify-between md:items-center items-end'>
                 <div className='flex flex-col md:flex-row  gap-3'>
                     <input type="file"
@@ -37,6 +37,19 @@ const Profile = () => {
                 </div>
                 <p className='text-sm md:text-md font-medium text-blue-500 cursor-pointer'>Business Profile</p>
             </div>
+            <div className='mt-5 space-y-1'>
+                <p className='text-md font-medium text-black'>Name</p>
+                <input className='pl-2 py-1 w-[80%] md:w-[50%] rounded border border-gray-500 outline-none' type="text" placeholder='Enter name' />
+        </div>
+        <div className='mt-5 space-y-1'>
+                <p className='text-md font-medium text-black'>Email</p>
+                <input className='pl-2 py-1 w-[80%] md:w-[50%] rounded border border-gray-500 outline-none' type="email" placeholder='Enter email' />
+        </div>
+        <div className='mt-5 space-y-1'>
+                <p className='text-md font-medium text-black'>About</p>
+                <textarea className='pl-2 py-1 h-20 w-[50%]  md:w-[30%] rounded border border-gray-500 outline-none' type="text" placeholder='About' />
+        </div>
+        <button className='py-1 px-3 border border-gray-500 hover:bg-gray-100 text-gray-600 hover:text-black rounded ml-[80%] md:ml-[90%]'>Done</button>
         </div>
       </div>
     </div>
