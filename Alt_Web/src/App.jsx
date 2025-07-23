@@ -16,6 +16,7 @@ import ActiveDelivery from './pages/ActiveDelivery';
 import PendingDelivery from './pages/PendingDelivery';
 import SuccessfulDelivery from './pages/SuccessfulDelivery';
 import TotalDelivery from './pages/TotalDelivery';
+import BusinessProfile from './pages/BusinessProfile';
 
 
 const AdminLayout = () => {
@@ -49,6 +50,7 @@ const App = () => {
             <Route path="/pendingdeliveries" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <PendingDelivery/> </motion.div> } />
             <Route path="/successfuldeliveries" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <SuccessfulDelivery/> </motion.div> } />
             <Route path="/totaldeliveries" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <TotalDelivery/> </motion.div> } />
+            <Route path="/businessprofile" element={ <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.5 }}> <BusinessProfile/> </motion.div> } />
           </Route>
         </Routes>
       </div>

@@ -37,7 +37,7 @@ const DisplayResSideNav = ({open}) => {
         open && (
             <>
                 <motion.div 
-                    className='md:hidden block mt-28 bg-gray-50 w-full absolute rounded'
+                    className='md:hidden block mt-28 bg-gray-100 w-full rounded-2xl'
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3 }}
@@ -47,7 +47,7 @@ const DisplayResSideNav = ({open}) => {
                             <motion.div 
                                 className={`flex items-center ${
                                     selectedItem === item.name ? 'bg-red-800 text-white' : 'text-black'
-                                } gap-3 p-5 text-xl mb-5 w-[50%] ml-5 rounded-2xl`} 
+                                } gap-3 p-3 text-md mt-5 mb-5 w-[50%] ml-5 rounded-2xl`} 
                                 key={index}
                                 onClick={() => handleItemClick(item.name)}
                                 whileHover={{ scale: 1.05, backgroundColor: '#f1f1f1' }}

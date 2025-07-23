@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { assets } from '../assets/assets'
+import { AltWebContext } from '../context/AltWebContext'
 
 const Profile = () => {
+  const {navigate} = useContext(AltWebContext)
+
+
   return (
     <>
     <div>
@@ -35,7 +39,7 @@ const Profile = () => {
                     ><img className='w-10 h-10' src={assets.profileimg} alt="" /></label>
                     <p className='text-xs md:text-sm font-medium text-blue-500'>Change profile picture</p>
                 </div>
-                <p className='text-sm md:text-md font-medium text-blue-500 cursor-pointer'>Business Profile</p>
+                <p className='text-sm md:text-md font-medium text-blue-500 cursor-pointer' onClick={() => navigate("/businessprofile")}>Business Profile</p>
             </div>
             <div className='mt-5 space-y-1'>
                 <p className='text-md font-medium text-black'>Name</p>
