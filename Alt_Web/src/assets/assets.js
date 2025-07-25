@@ -18,6 +18,14 @@ import deliveryimg2 from "./deliveryimg2.png"
 import deliverycheckmark from "./deliverycheckmark.png"
 import deliveryprofile from "./deliveryprofile.png"
 import deliveryphone from "./deliveryphone.png"
+import star from "./star.png"
+import star1 from "./star-1.png"
+import star2 from "./star-2.png"
+import star3 from "./star-3.png"
+import star4 from "./star-4.png"
+import map from "./mapindicator.png"
+import addAddress from "./addaddress.png"
+import solarCart from "./solarcart.png"
 
 
 
@@ -42,5 +50,13 @@ export const assets = {
     deliveryimg2,
     deliverycheckmark,
     deliveryphone,
-    deliveryprofile
+    deliveryprofile,
+    star,
+    star1,
+    star2,
+    star3,
+    star4,
+    map,
+    addAddress,
+    solarCart
 }

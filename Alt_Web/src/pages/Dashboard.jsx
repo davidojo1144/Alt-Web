@@ -12,7 +12,7 @@ const Dashboard = () => {
       <div className='lg:p-8 md:p-4 md:ml-0 ml-10 p-10 relative'>
         <div className='flex justify-between'>
           <h1 className='text-xl md:text-2xl font-normal md:font-bold'>Welcome, Eric</h1>
-          <div className='flex gap-3 p-3 border-2 border-gray-500 rounded-2xl  justify-between'>
+          <div className='flex gap-12 md:gap-3 p-3 border-2 border-gray-500 rounded-2xl  justify-between'>
             <img className='w-5 h-5 cursor-pointer' src={assets.dashnotification} alt="" />
             <img className='w-5 h-5 cursor-pointer' src={assets.dashprofile} alt="" />
           </div>

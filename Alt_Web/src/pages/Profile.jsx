@@ -13,9 +13,9 @@ const Profile = () => {
         <div className='flex justify-between'>
             <div className='flex gap-3 p-3 items-center justify-between'>
                 <img className='w-7 h-7 cursor-pointer' src={assets.dashprofile} alt="" />
-                <h1 className='text-xl font-bold'>Eric</h1>
+                <h1 className='text-xl font-normal md:font-bold'>Eric</h1>
             </div>
-            <div className='flex gap-3 p-3 border-2 border-gray-500 rounded-2xl  justify-between'>
+            <div className='flex gap-12 md:gap-3 p-3 border-2 border-gray-500 rounded-2xl  justify-between'>
                 <img className='w-5 h-5 cursor-pointer' src={assets.messageicon} alt="" />
                 <img className='w-5 h-5 cursor-pointer' src={assets.dashnotification} alt="" />
             </div>

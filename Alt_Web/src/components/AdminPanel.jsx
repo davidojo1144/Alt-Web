@@ -35,18 +35,18 @@ const AdminPanel = () => {
 
   return (
     <>
-    <div className="md:w-[20%] lg:p-8 md:p-4 p-8 md:block hidden">
+    <div className="lg:w-[20%] w-[30%] lg:p-8 p-4 md:block hidden">
       <h1 className="text-red-500 text-xl font-bold">Admin</h1>
       <div className="mt-5 ml-[5%] space-y-10">
         {adminPanel.map((item, index) => (
           <div
             className={`flex items-center ${
               selectedItem === item.name ? 'bg-red-800 text-white' : 'text-black'
-            } gap-3 cursor-pointer rounded-full px-4 py-2 w-[80%]`}
+            } gap-3 cursor-pointer rounded-full px-4 py-2`}
             key={index}
             onClick={() => handleItemClick(item.name)}
           >
-            <img className="w-5 h-5" src={item.img} alt={item.name} />
+            <img className="w-5 h-5" src={item.img} />
             <p className="text-md font-medium">{item.name}</p>
           </div>
         ))}
