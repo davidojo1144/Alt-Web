@@ -4,15 +4,14 @@ import { dispatcherDetails } from '../lib/DispatcherDetails'
 import { AltWebContext } from '../context/AltWebContext'
 
 const Dashboard = () => {
-  const {navigate, activeDelivery, pendingDelivery, successfulDelivery, totalDelivery} =  useContext(AltWebContext)
-
+  const { navigate, activeDelivery, pendingDelivery, successfulDelivery, totalDelivery } = useContext(AltWebContext)
 
   return (
     <div>
       <div className='lg:p-8 md:p-4 md:ml-0 ml-10 p-10 relative'>
         <div className='flex justify-between'>
           <h1 className='text-xl md:text-2xl font-normal md:font-bold'>Welcome, Eric</h1>
-          <div className='flex gap-12 md:gap-3 p-3 border-2 border-gray-500 rounded-2xl  justify-between'>
+          <div className='flex gap-12 md:gap-3 p-3 border-2 border-gray-500 rounded-2xl justify-between'>
             <img className='w-5 h-5 cursor-pointer' src={assets.dashnotification} alt="" />
             <img className='w-5 h-5 cursor-pointer' src={assets.dashprofile} alt="" />
           </div>
@@ -110,8 +109,70 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className='w-full p-5 border border-gray-400 rounded-3xl  mt-5'>
-            <img src={assets.recentshipment} alt="" />
+        <div className='w-full p-5 border border-gray-400 rounded-3xl mt-5'>
+          <h1 className='text-md text-red-500 font-semibold'>Recent Shipments</h1>
+          <div className="mt-3 grid grid-cols-2 gap-5 md:gap-0 md:flex md:flex-col">
+            <div className='flex flex-col md:flex-row mb-2 justify-between text-xs md:text-sm text-black'>
+              <span className='w-2 h-2 rounded-full bg-red-500 mr-2 hidden '></span>
+              <span className='text-md font-bold'>Dispatcher no</span>
+              <span className='text-md font-bold' >Items no</span>
+              <span className='text-md font-bold'>Order date</span>
+              <span className='text-md font-bold'>Dispatch date</span>
+              <span className='text-md font-bold' >Dispatch location</span>
+              <span className='text-md font-bold' >Quantity</span>
+              <span className='text-md font-bold'>Dispatch status</span>
+            </div>
+            <div className='flex flex-col md:flex-row mb-2 justify-between text-xs md:text-sm text-black'>
+              <span className='w-2 h-2 rounded-full bg-red-500 mr-2 hidden '></span>
+              <span>Peter Akpan</span>
+              <span >SARA4231</span>
+              <span >29-07-23</span>
+              <span >29-07-23</span>
+              <span >Rumuokoro,PH</span>
+              <span >20</span>
+              <span className=' text-green-500'>Ongoing</span>
+            </div>
+            <div className='flex flex-col md:flex-row  mb-2 justify-between text-xs md:text-sm text-black'>
+              <span className='w-2 h-2 rounded-full bg-red-500 mr-2 hidden '></span>
+              <span>John West</span>
+              <span >BR2108</span>
+              <span >31-07-23</span>
+              <span >01-08-23</span>
+              <span >Rumudara,PH</span>
+              <span >2</span>
+              <span className=' text-green-500'>Ongoing</span>
+            </div>
+            <div className='flex flex-col md:flex-row mb-2 justify-between text-xs md:text-sm text-black'>
+              <span className='w-2 h-2 rounded-full bg-red-500 mr-2 hidden'></span>
+              <span>Casper Use</span>
+              <span >NIG2108</span>
+              <span >31-07-23</span>
+              <span >31-07-23</span>
+              <span >Elozua,PH</span>
+              <span >5</span>
+              <span className=' text-yellow-500'>Pending</span>
+            </div>
+            <div className='flex flex-col md:flex-row mb-2 justify-between text-xs md:text-sm text-black'>
+              <span className='w-2 h-2 rounded-full bg-red-500 mr-2 hidden'></span>
+              <span>Frank Lampard</span>
+              <span >HAN5451</span>
+              <span >01-08-23</span>
+              <span >01-08-23</span>
+              <span >Waterlines,PH</span>
+              <span >15</span>
+              <span className=' text-blue-500'>Completed</span>
+            </div>
+            <div className='flex flex-col md:flex-row mb-2 justify-between text-xs md:text-sm text-black'>
+              <span className='w-2 h-2 rounded-full bg-red-500 mr-2 hidden'></span>
+              <span>Harrison Adodike</span>
+              <span >HUM6712</span>
+              <span >01-08-23</span>
+              <span >02-08-23</span>
+              <span >Aba Road,PH</span>
+              <span >200</span>
+              <span className=' text-blue-500'>Completed</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>

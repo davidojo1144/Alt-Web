@@ -1,37 +1,13 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext} from 'react'
 import { assets } from '../assets/assets'
 import { AltWebContext } from '../context/AltWebContext'
 
-const Profile = () => {
+const EditProfile = () => {
   const { navigate } = useContext(AltWebContext)
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    about: ''
-  })
+  const profileData = JSON.parse(localStorage.getItem("profileData"))
+ 
 
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleSave = () => {
-    localStorage.setItem('profileData', JSON.stringify(formData))
-    setFormData({
-    name: '',
-    email: '',
-    about: ''
-    })
-    navigate("/editprofile")
-  }
-
-
-
-  return (
+return (
     <>
     <div>
       <div className='lg:p-8 md:p-4 md:ml-0 ml-10 p-8 relative'>
@@ -62,47 +38,28 @@ const Profile = () => {
                     htmlFor="logo-upload" 
                     className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer  transition-colors overflow-hidden"
                     ><img className='w-10 h-10' src={assets.profileimg} alt="" /></label>
-                    <p className='text-xs md:text-sm font-medium text-blue-500'>Change profile picture</p>
+                    <p className='text-xs md:text-xl font-medium text-blue-500'>Profile</p>
                 </div>
                 <p className='text-sm md:text-md font-medium text-blue-500 cursor-pointer' onClick={() => navigate("/businessprofile")}>Business Profile</p>
             </div>
             <div className='mt-5 space-y-1'>
-                <p className='text-md font-medium text-black'>Name</p>
-                <input 
-                className='pl-2 py-1 w-[80%] md:w-[50%] rounded border border-gray-500 outline-none' 
-                type="text" 
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                placeholder='Enter name' 
-                />
+                <p className='text-md font-semibold text-black'>Name</p>
+                <p className='text-sm font-normal text-gray-500'>{profileData.name}</p>
         </div>
+        <div className='mt-3 border w-full border-gray-400'></div>
         <div className='mt-5 space-y-1'>
-                <p className='text-md font-medium text-black'>Email</p>
-                <input 
-                className='pl-2 py-1 w-[80%] md:w-[50%] rounded border border-gray-500 outline-none' 
-                type="email" 
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder='Enter email'
-                 />
+            <p className='text-md font-semibold text-black'>Email</p>
+            <p className='text-sm font-normal text-gray-500'>{profileData.email}</p>
         </div>
-        <div className='mt-5 space-y-1'>
-                <p className='text-md font-medium text-black'>About</p>
-                <textarea 
-                className='pl-2 py-1 h-20 w-[50%]  md:w-[30%] rounded border border-gray-500 outline-none' 
-                name="about"
-                value={formData.about}
-                onChange={handleInputChange}
-                placeholder='About' 
-                />
+        <div className='mt-3 border w-full border-gray-400'></div>
+        <div className='mt-5 space-y-1 '>
+            <p className='text-md font-semibold text-black'>About</p>
+            <p className='text-sm font-normal text-gray-500 w-[50%] '>{profileData.about}</p>
         </div>
         <button 
-        className='py-1 px-3 border border-gray-500 hover:bg-gray-100 text-gray-600 hover:text-black rounded ml-[80%] md:ml-[90%]' 
-        disabled={!formData.name || !formData.email || !formData.about}
-        onClick={handleSave}
-        >Done</button>
+        className='py-1 px-1 border border-gray-500 hover:bg-gray-100 text-gray-600 hover:text-black rounded mt-10 ml-[70%] md:ml-[90%]' 
+        onClick={() => navigate("/profile")}
+        >Edit profile</button>
         </div>
       </div>
     </div>
@@ -110,4 +67,4 @@ const Profile = () => {
   )
 }
 
-export default Profile
+export default EditProfile

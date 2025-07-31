@@ -25,10 +25,10 @@ export const adminPanel = [
         img : track,
         name : "Track"
     },
-      {
-        img : chats,
-        name : "Wallet"
-    },
+    //   {
+    //     img : chats,
+    //     name : "Wallet"
+    // },
       {
         img : drivers,
         name : "Drivers"
