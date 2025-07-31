@@ -1,34 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { assets } from '../assets/assets'
 import { AltWebContext } from '../context/AltWebContext'
 
 const Profile = () => {
-  const { navigate } = useContext(AltWebContext)
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    about: ''
-  })
-
-
-  const handleInputChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }))
-  }
-
-  const handleSave = () => {
-    localStorage.setItem('profileData', JSON.stringify(formData))
-    setFormData({
-    name: '',
-    email: '',
-    about: ''
-    })
-    navigate("/editprofile")
-  }
-
+  const {navigate} = useContext(AltWebContext)
 
 
   return (
@@ -68,41 +43,17 @@ const Profile = () => {
             </div>
             <div className='mt-5 space-y-1'>
                 <p className='text-md font-medium text-black'>Name</p>
-                <input 
-                className='pl-2 py-1 w-[80%] md:w-[50%] rounded border border-gray-500 outline-none' 
-                type="text" 
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                placeholder='Enter name' 
-                />
+                <input className='pl-2 py-1 w-[80%] md:w-[50%] rounded border border-gray-500 outline-none' type="text" placeholder='Enter name' />
         </div>
         <div className='mt-5 space-y-1'>
                 <p className='text-md font-medium text-black'>Email</p>
-                <input 
-                className='pl-2 py-1 w-[80%] md:w-[50%] rounded border border-gray-500 outline-none' 
-                type="email" 
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder='Enter email'
-                 />
+                <input className='pl-2 py-1 w-[80%] md:w-[50%] rounded border border-gray-500 outline-none' type="email" placeholder='Enter email' />
         </div>
         <div className='mt-5 space-y-1'>
                 <p className='text-md font-medium text-black'>About</p>
-                <textarea 
-                className='pl-2 py-1 h-20 w-[50%]  md:w-[30%] rounded border border-gray-500 outline-none' 
-                name="about"
-                value={formData.about}
-                onChange={handleInputChange}
-                placeholder='About' 
-                />
+                <textarea className='pl-2 py-1 h-20 w-[50%]  md:w-[30%] rounded border border-gray-500 outline-none' type="text" placeholder='About' />
         </div>
-        <button 
-        className='py-1 px-3 border border-gray-500 hover:bg-gray-100 text-gray-600 hover:text-black rounded ml-[80%] md:ml-[90%]' 
-        disabled={!formData.name || !formData.email || !formData.about}
-        onClick={handleSave}
-        >Done</button>
+        <button className='py-1 px-3 border border-gray-500 hover:bg-gray-100 text-gray-600 hover:text-black rounded ml-[80%] md:ml-[90%]'>Done</button>
         </div>
       </div>
     </div>

@@ -26,16 +26,7 @@ import star4 from "./star-4.png"
 import map from "./mapindicator.png"
 import addAddress from "./addaddress.png"
 import solarCart from "./solarcart.png"
-import addMore from "./addmore.png"
-import drivernote from "./drivernote.png"
-import driverimg from "./driverimg.png"
-import driimg1 from "./driimg1.png"
-import driimg2 from "./driimg2.png"
-import driimg3 from "./driimg3.png"
-import trackbg from "./trackbg.png"
-import drivertel from "./drivertel.png"
-import driveremail from "./driveremail.png"
-import driverlocation from "./driverlocation.png"
+
 
 
 
@@ -67,15 +58,5 @@ export const assets = {
     star4,
     map,
     addAddress,
-    solarCart,
-    addMore,
-    drivernote,
-    driverimg,
-    driimg1,
-    driimg2,
-    driimg3,
-    trackbg,
-    drivertel,
-    driveremail,
-    driverlocation
+    solarCart
 }
